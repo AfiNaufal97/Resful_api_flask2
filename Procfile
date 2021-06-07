@@ -1,1 +1,1 @@
-web: gunicorn Api --reload --workers 2
+web: gunicorn Api.Sijora.Setting:app --reload --workers 2
