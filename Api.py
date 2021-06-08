@@ -24,7 +24,7 @@ def add_sentiment():
     request_data = request.get_json()  # getting data from client
     Sentiment.add_sentiment(request_data["input_mobile"], request_data["output_positive"],
                     request_data["output_negative"])
-    response = Response("Sentiment added", 201, mimetype='application/x-www-form-urlencoded')
+    response = Response("Sentiment added", 201, mimetype='application/json')
     return response
 
 
