@@ -7,10 +7,14 @@ def get_sentiment():
 
 
 # route to get movie by id
+# @app.route('/sentiment/<int:id>', methods=['GET'])
+# def get_sentiment_by_id(id):
+#     return_value = Sentiment.get_sentiment(id)
+#     return jsonify(return_value)
 @app.route('/sentiment/<int:id>', methods=['GET'])
 def get_sentiment_by_id(id):
     return_value = Sentiment.get_sentiment(id)
-    return jsonify(return_value)
+    return jsonify({'Sijora' : return_value})
 
 
 # route to add new movie
