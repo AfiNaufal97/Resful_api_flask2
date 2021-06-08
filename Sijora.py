@@ -30,7 +30,7 @@ class Sentiment(db.Model):
 
     def get_sentiment(_id):
         # return [Sentiment.json(Sentiment.query.filter_by(id=_id).first())]
-        return {Sentiment.json(Sentiment.query.filter_by(id=_id).first())}
+        return Sentiment.json(Sentiment.query.filter_by(id=_id).first())
 
     def update_sentiment(_id, _input_mobile, _output_positive, _output_negative):
         sentiment_to_update = Sentiment.query.filter_by(id=_id).first()
