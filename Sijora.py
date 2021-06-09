@@ -6,7 +6,7 @@ db = SQLAlchemy(app)
 
 
 class Sentiment(db.Model):
-    __tablename_ = 'sijora'
+    __tablename_ = 'SijoraNext'
     id = db.Column(db.Integer, primary_key=True)
     input_mobile = db.Column(db.String(80), nullable=True)
     output_positive = db.Column(db.String(80), nullable=True)
